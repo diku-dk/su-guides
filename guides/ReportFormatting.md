@@ -8,7 +8,7 @@ LaTeX package provides a template for your LaTeX reports in Software Development
 The description of how to set up the package on Overleaf or your local computer can be found after `Using su.sty`.
 
 # Using su.sty
-### **When using su.sty you must never change su.sty and how the paper is set up. In the case that let us say the margins get smaller or the font size gets smaller than allowed, then you will fail your assignment.**
+### **When using su.sty you must never change su.sty and how the paper is set up. In the case that let us say the margins or the font size gets smaller than allowed, then you will fail your assignment.**
 
 You can start with a `main.tex` as follows:
 

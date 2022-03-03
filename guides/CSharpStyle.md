@@ -23,7 +23,7 @@ Start off by placing the [.editorconfig](../files/.editorconfig) inside the proj
 ```sh
 $ dotnet format . -v diag --report .
 ```
-The first do specifies the path to the project/solution folder, the last dot specifies the path to where the report should be placed. When running this command the formatter will try to make the code follow the style guide specified in this document.
+The first dot specifies the path to the project/solution folder, the last dot specifies the path to where the report should be placed. When running this command the formatter will try to make the code follow the style guide specified in this document.
 
 The report generated will tell the user all the problems with the code style that could not be automatically fixed. It is important to look this report through and fix the problems it found.
 
@@ -59,7 +59,7 @@ In short, you avoid forcing your readers to shift eye-focus along
 multiple dimensions, and avoid the risk that they will have to scroll
 left/right, in addition to up/down, to get an overview of your code.
 
-You can add a vertical ruler in Visual Studio Code in the settings.json file found by opening the Command Palette (Ctrl+Shift+P or Cmd+Shift+P) then type "Open Settings (JSON)" and press enter. Then paste this in afther the first opening curly bracket. 
+You can add a vertical ruler in Visual Studio Code in the settings.json file found by opening the Command Palette (Ctrl+Shift+P or Cmd+Shift+P) then type "Open Settings (JSON)" and press enter. Then paste this in after the first opening curly bracket. 
 ```
 "editor.rulers": [100],
 ```
@@ -188,13 +188,13 @@ exception is made for partial classes, where a part of the class is written by
 an automated tool (e.g., a GUI designer). You will most likely not encounter or need partial classes in this course.
 
 ## Namespaces
-There should be one class per file. This is to keep source files small. To make sure this is done correctly the file scoped namespace is always used. The file scoped namespace is defined like so `namespace MyNamespace;` and has the added benefit of removing one unnecessary indent in your code.
+There should be one namespace per file. This is done to keep source files small. To make sure this is done correctly the file scoped namespace is always used. The file scoped namespace is defined like so `namespace MyNamespace;` and has the added benefit of removing one unnecessary indent in your code. You should add this to the top of your code before packages such that you do not override existing packages.
 
-Your namespaces should represent the file path you are in, so you might have a namespace insides your project folder called `MyNamespace`. If one were to add a folder inside the project folder called IO, then the namespace for all the code in that fold should be `MyNamespace.IO`. And if a folder is added inside the aforementioned IO folder called Console, then the name for all the code in that folder should be `MyNamespace.IO.Console`.
+Your namespaces should represent the file path you are in, so you might have a namespace insides your project folder called `MyNamespace`. If one were to add a folder inside the project folder called IO, then the namespace for all the code in that folder should be `MyNamespace.IO`. And if a folder is added inside the aforementioned IO folder called Console, then the name for all the code inside that folder should be `MyNamespace.IO.Console`.
 
 ## Minimize indentation when doing control flow
 
-It was mention in the **Line width** section it is prefered to have short lines such that the code can be read faster. One way to make lines shorter is by considering the control flow in ones code. Let us start by considering a case study with for loops, this is a code segment from the method `ProcessEventsSequentially` in the GameEventBus class from DIKUArcade in the commit from 2021 Mar 26, 2021.
+It was mentioned in the **Line width** section it is prefered to have short lines such that the code can be read faster. One way to make lines shorter is by considering the control flow in ones code. Let us start by considering a case with for loops, this is a code snippet from the method `ProcessEventsSequentially` in the GameEventBus class from DIKUArcade in the commit from 2021 Mar 26, 2021.
 ```csharp
 foreach(GameEventType eventType in processOrder) {
     if (_eventQueues != null) {
@@ -213,7 +213,7 @@ foreach(GameEventType eventType in processOrder) {
     }
 }
 ```
-One can start by considering the first if statement which reads "execute the code if `_eventQueues` is not null". One can get less indentatino by considering the negation of this which is "skip the code if `_eventQueues` is null". This can be directly translated into code by using the `continue` keyword, this will results in the following code which will have one less indent.
+One can start by considering the first if statement which reads "execute the code if `_eventQueues` is not null". One can get less indentatino by considering the negation of this which is "skip the code if `_eventQueues` is null". This can be directly translated into code by using the `continue` keyword, this will result in the following code which will have one less indent.
 
 ```csharp
 foreach(GameEventType eventType in processOrder) {
@@ -251,15 +251,13 @@ public void IsInInterval(int val, int min, int max) {
     }
 }
 ```
-And now considering the negation of the predicates you get.
+And now considering the negation of the first predicate you get.
 ```csharp
 public void IsInInterval(int val, int min, int max) {
     if (min > max) {
         Console.WriteLine("Max must be greater or equal to min.");
         return;
-    }
-
-    if (min <= val && val <= max) {
+    } else if (min <= val && val <= max) {
         Console.WriteLine($"{val} is in [{min}; {max}].");
         return;
     }
@@ -299,7 +297,3 @@ public class MyClass<MyType> : IMyInterface {
     }
 }
 ```
-These are _guidelines_, which mean that they describe how we would like your
-code to be formatted such that they uphold the style guide. However, making
-code is very much a creative process, and you are encouraged to find your own
-way of expressing things (within the limits of what our Style Guide allows).
