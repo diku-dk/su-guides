@@ -9,6 +9,7 @@
 ## Code
 
 * [C# Style Guide](guides/CSharpStyle.md)
+* [.editorconfig and VS Code](guides/EditorConfigVSCode.md)
 * [NUnit Guidelines](guides/NUnit_guidelines.md)
 
 
