@@ -115,8 +115,7 @@ particular, you should, at least:
 Use spaces to space out the syntactical elements along a line. In
 particular, you should:
 
-* Use a space before any opening parentheses that is not part of an argument list. (e.g., `for`- or `if`- statement
-  condition).
+* Use a space before any opening parentheses that is used for a `for`-, `while-` or `if`- statement.
 * Use a space before an opening curly brace.
 * Use a space after each parameter in a parameter list.
 * Have a space on each side of an infix operator.
