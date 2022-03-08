@@ -88,7 +88,7 @@ class MyClass : BaseClass {
     // All rules have exceptions.
     public int MyProperty { get; }
     
-    public void MyFunc (int a, int b) {
+    public void MyFunc(int a, int b) {
         for (int i = 0; i < 15; i++) {
             if (i < 5) {
               // ...
@@ -115,10 +115,9 @@ particular, you should, at least:
 Use spaces to space out the syntactical elements along a line. In
 particular, you should:
 
-* Use a space before any opening parentheses that is part of a
-  statement (e.g., argument list, `for`- or `if`- statement
+* Use a space before any opening parentheses that is not part of an argument list. (e.g., `for`- or `if`- statement
   condition).
-* Use a space before an opening brace.
+* Use a space before an opening curly brace.
 * Use a space after each parameter in a parameter list.
 * Have a space on each side of an infix operator.
 
@@ -196,7 +195,7 @@ Your namespaces should represent the file path you are in, so you might have a n
 
 It was mentioned in the **Line width** section it is prefered to have short lines such that the code can be read faster. One way to make lines shorter is by considering the control flow in ones code. Let us start by considering a case with for loops, this is a code snippet from the method `ProcessEventsSequentially` in the GameEventBus class from DIKUArcade in the commit from 2021 Mar 26, 2021.
 ```csharp
-foreach(GameEventType eventType in processOrder) {
+foreach (GameEventType eventType in processOrder) {
     if (_eventQueues != null) {
         while (!_eventQueues[eventType].IsEmpty()) {
             var currentEvent = _eventQueues[eventType].Dequeue();
@@ -213,10 +212,10 @@ foreach(GameEventType eventType in processOrder) {
     }
 }
 ```
-One can start by considering the first if statement which reads "execute the code if `_eventQueues` is not null". One can get less indentatino by considering the negation of this which is "skip the code if `_eventQueues` is null". This can be directly translated into code by using the `continue` keyword, this will result in the following code which will have one less indent.
+One can start by considering the first if statement which reads "execute the code if `_eventQueues` is not null". One can get less indentation by considering the negation of this which is "skip the code if `_eventQueues` is null". This can be directly translated into code by using the `continue` keyword, this will result in the following code which will have one less indent.
 
 ```csharp
-foreach(GameEventType eventType in processOrder) {
+foreach (GameEventType eventType in processOrder) {
     if (_eventQueues == null) {
         continue;
     }
