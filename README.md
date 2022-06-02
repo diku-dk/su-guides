@@ -6,6 +6,7 @@
 * [Writing Technical Reports (old)](files/techReport.pdf)
 * [Example of a Technical Report](files/su17-tic-tac-toe.pdf)
 * [Report Formatting Guide](guides/ReportFormatting.md)
+* [Generation of Code Coverage Report Guide](guides/CodeCoverageReport.md)
 
 ## Code
 
