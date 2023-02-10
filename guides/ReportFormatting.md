@@ -18,7 +18,7 @@ You can start with a `main.tex` as follows:
 \usepackage{su}
 
 \header{%
-  assignment={Exercise 1: Introduction to C#},%
+  assignment={Exercise 1: Introduction to C\#},%
   authors={Donald E. Knuth <\texttt{knuth@stanford.edu}>},%
   shortAuthors={\texttt{knuth}},%
   date={Friday, February 10, 15:00},%
