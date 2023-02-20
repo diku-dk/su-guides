@@ -14,8 +14,6 @@
 * [.editorconfig and VS Code](guides/EditorConfigVSCode.md)
 * [NUnit Guidelines](guides/NUnit_guidelines.md)
 
-
-
 ## IDE and software
 We will be using Visual Studio Code for the course.
 
