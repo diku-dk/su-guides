@@ -1,10 +1,6 @@
 # What does the arrows mean?
 This guide will relate C# code to the arrows found in UML class diagrams. This guide is not intended as a way to learn UML class diagrams, it is just meant as a supplement to other resources. An alternative resource to understand UML class diagrams can be found [here](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-class-diagram-tutorial/).
 
-<p align="center">
-  <img src="diagrams/inheritance.png" />
-</p>
-
 # Inheritance
 An example of when an inheritance relationship can occur is.
 ```csharp
