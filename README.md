@@ -7,6 +7,7 @@
 * [Example of a Technical Report](files/su17-tic-tac-toe.pdf)
 * [Report Formatting Guide](guides/ReportFormatting.md)
 * [Generation of Code Coverage Report Guide](guides/CodeCoverageReport.md)
+* [What does the UML Class Diagram arrows mean?](guides/UMLClassDiagrams/guide.md)
 
 ## Code
 
