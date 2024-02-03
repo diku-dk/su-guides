@@ -12,7 +12,7 @@ class ClassB : ClassA {
   
 } 
 ```
-The inheritance arrow is used since `ClassB` inherits from `ClassA` which can be expressed as an UML class diagram below.
+The inheritance arrow is used since `ClassB` inherits from `ClassA`, which can be expressed as a UML class diagram below.
 
 <p align="center">
   <img src="diagrams/inheritance.png" />
@@ -29,14 +29,14 @@ class ClassB {
     
 } 
 ```
-The aggregation arrow is used if `ClassB` is part of `ClassA`, but they have seperate life spans. This means that `ClassA` can stop existing while `ClassB` can keep existing. So if you consider the following piece of code. 
+The aggregation arrow is used if `ClassB` is part of `ClassA`, but they have separate life spans. This means that `ClassA` can stop existing while `ClassB` can keep existing. So if you consider the following piece of code. 
 ```
 var a = new ClassA();
 var b = new ClassB();
 a.class_b = b;
 a = null;
 ```
-Then at the last line of the code the instance of `ClassA` has stopped existing but the instance of `ClassB` is still available. This relation can be expressed using the following arrow.
+Then, executing the last line of the code, the instance of `ClassA` has stopped dereferenced and is inaccessible using the variable `a`, but the instance of `ClassB` is still available. This relation can be expressed using the following arrow.
 
 <p align="center">
   <img src="diagrams/aggregation.png" />
@@ -70,7 +70,7 @@ class ClassB {
     
 } 
 ```
-The composition arrow is used if `ClassB` is part of `ClassA` and they have the same life span. This means that if an instance of `ClassA` stops existing then its instance of `ClassB` will stop existing. If a public field was used then they would not necessarily have the same life span. An example of this piece of code can be expressed as an UML class digram can be seen below.
+The composition arrow is used if `ClassB` is part of `ClassA` and they have the same life span. This means that if an instance of `ClassA` stops existing then its instance of `ClassB` will stop existing. If a public field were used then they would not necessarily have the same life span. An example of this piece of code can be expressed as a UML class digram can be seen below.
 
 <p align="center">
   <img src="diagrams/composition.png" />
@@ -91,7 +91,7 @@ class ClassB {
     } 
 } 
 ```
-The dependency arrow is used when a class is dependent on another class without storing the class in a field. In the example above `ClassB` depends on `ClassA` in the sense that if you changed `ClassA` such that `Print` did not exist then `ClassB` would break. Also since `ClassB` does not store an instance of `ClassA` the dependency is less strong than an aggregation or a composition. Below is a diagram expressing the code. 
+The dependency arrow is used when a class is dependent on another class without storing the class in a field. In the example above, `ClassB` depends on `ClassA` in the sense that if you changed `ClassA` such that `Print` did not exist then `ClassB` would break. Also, since `ClassB` does not store an instance of `ClassA`, the dependency is less strong than an aggregation or a composition. Below is a diagram expressing the code. 
 
 <p align="center">
   <img src="diagrams/dependency.png" />
@@ -107,7 +107,7 @@ class ClassB : IInterfaceA {
     
 } 
 ```
-The realization arrow is used when a class implements some blueprint. As an example the blueprint can specify a set of methods that must be implemented such  that the implementation is fulfilled for that class. This commonly happens when an interface or an abstract class is used. In the code above `ClassB` implements `IInterfaceA` which does not need any fields or methods to be implemented. The diagram below shows an UML class diagram expressing the code.
+The realization arrow is used when a class implements some blueprint. As an example, the blueprint can specify a set of methods that must be implemented such that the implementation is fulfilled for that class. This commonly happens when an interface or an abstract class is used. In the code above, `ClassB` implements `IInterfaceA`, which does not need any fields or methods to be implemented. The diagram below shows a UML class diagram expressing the code. Here, we say that class `ClassB` implements interface `IInterfaceA`. 
 
 <p align="center">
   <img src="diagrams/realization.png" />
