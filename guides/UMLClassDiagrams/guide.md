@@ -36,7 +36,7 @@ var b = new ClassB();
 a.class_b = b;
 a = null;
 ```
-Then, executing the last line of the code, the instance of `ClassA` has stopped dereferenced and is inaccessible using the variable `a`, but the instance of `ClassB` is still available. This relation can be expressed using the following arrow.
+Then, executing the last line of the code, the instance of `ClassA` has been dereferenced and is inaccessible using the variable `a`, but the instance of `ClassB` is still available. This relation can be expressed using the following arrow.
 
 <p align="center">
   <img src="diagrams/aggregation.png" />
