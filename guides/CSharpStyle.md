@@ -19,7 +19,7 @@ This style guide has also been enforced using the [editorconfig project](https:/
 in the file [.editorconfig](../files/.editorconfig).
 
 ## Using EditorConfig via the Terminal
-Start off by placing the [.editorconfig](../files/.editorconfig) inside the project/solution folder. Then navigate inside the project/solution folder and run the following command.
+Start off by placing the [.editorconfig](../files/.editorconfig) inside the project/solution folder, this file must have the name `.editorconfig`. Then navigate inside the project/solution folder and run the following command.
 ```sh
 $ dotnet format . -v diag --report .
 ```
