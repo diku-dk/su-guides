@@ -298,3 +298,21 @@ xrightmargin=25pt, % make frame lines align to text width
 
 \RequirePackage{menukeys}
 %%%
+
+%%%
+% Better links.
+\renewcommand{\href}[2]{%
+  \begingroup
+  \pdfstartlink
+    user{
+      /Subtype /Link
+      /A <<
+        /S /URI
+        /URI (#1)
+      >>
+    }%
+  \textcolor{blue}{\underline{#2}}%
+  \pdfendlink
+  \endgroup
+}
+%%%
