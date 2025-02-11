@@ -83,9 +83,9 @@ dotnet_naming_rule.non_field_members_should_be_pascal_case.severity = warning
 dotnet_naming_rule.non_field_members_should_be_pascal_case.symbols = non_field_members
 dotnet_naming_rule.non_field_members_should_be_pascal_case.style = pascal_case
 
-dotnet_naming_rule.public_field_should_be_camelcasestyle.severity = warning
-dotnet_naming_rule.public_field_should_be_camelcasestyle.symbols = public_field
-dotnet_naming_rule.public_field_should_be_camelcasestyle.style = camelcasestyle
+dotnet_naming_rule.field_members_should_be_pascal_case.severity = warning
+dotnet_naming_rule.field_members_should_be_pascal_case.symbols = public_field
+dotnet_naming_rule.field_members_should_be_pascal_case.style = pascal_case
 
 dotnet_naming_rule.private_field_should_be_camelcasestyle.severity = warning
 dotnet_naming_rule.private_field_should_be_camelcasestyle.symbols = private_field
