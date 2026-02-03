@@ -172,7 +172,7 @@ Interfaces are named with an `I` in front followed by the interfaces name in `Pa
 
 It is the public and protected members of a class the determine its
 responsibility. Hence, you should mark your members as `private`,
-unless it is intensional that they are exposed as part of your
+unless it is intentional that they are exposed as part of your
 inheritance or public interface.
 
 Also, mark fields as `const` or `readonly` when possible. When used on
@@ -192,7 +192,7 @@ Your namespaces should represent the file path you are in, so you might have a n
 
 ## Minimize indentation when doing control flow
 
-It was mentioned in the **Line width** section it is prefered to have short lines such that the code can be read faster. One way to make lines shorter is by considering the control flow in ones code. Let us start by considering a case with for loops, this is a code snippet from the method `ProcessEventsSequentially` in the GameEventBus class from DIKUArcade in the commit from 2021 Mar 26, 2021.
+It was mentioned in the **Line width** section it is preferred to have short lines such that the code can be read faster. One way to make lines shorter is by considering the control flow in ones code. Let us start by considering a case with for loops, this is a code snippet from the method `ProcessEventsSequentially` in the GameEventBus class from DIKUArcade in the commit from 2021 Mar 26, 2021.
 ```csharp
 foreach (GameEventType eventType in processOrder) {
     if (_eventQueues != null) {
