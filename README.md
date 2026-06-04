@@ -9,6 +9,13 @@
 * [Generation of Code Coverage Report Guide](guides/CodeCoverageReport.md)
 * [What does the UML Class Diagram arrows mean?](guides/UMLClassDiagrams/guide.md)
 
+| Language | UML Class Diagram Guide |
+| --- | --- |
+| C# | [C# UML Class Diagram Arrows](guides/UMLClassDiagrams/guide.md) |
+| Java | [Java UML Class Diagram Arrows](guides/UMLClassDiagrams/multi-language-guides/java.md) |
+| Python | [Python UML Class Diagram Arrows](guides/UMLClassDiagrams/multi-language-guides/python.md) |
+| JavaScript | [JavaScript UML Class Diagram Arrows](guides/UMLClassDiagrams/multi-language-guides/javascript.md) |
+
 ## Code
 
 * [C# Style Guide](guides/CSharpStyle.md)
